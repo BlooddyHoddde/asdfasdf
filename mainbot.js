@@ -12,6 +12,11 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
   console.log(`---------------------------------------`);
 });
+
+client.on('ready', () => {
+   client.user.setGame(" !!help ");
+}); 
+
 //الرد التلقائي
 //--------------------------------------------
 client.on('message', msg => {
