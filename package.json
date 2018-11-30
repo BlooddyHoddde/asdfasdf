@@ -1,0 +1,23 @@
+{
+  "name": "absd",
+  "version": "2.1.0",
+  "description": "asdb",
+  "main": "music.js",
+  "scripts": {
+    "test": "node music.js"
+  },
+  "dependencies": {
+    "discord.js": "11.4.2",
+    "fs": "0.0.1-security",
+    "ms":"2.1.1",
+    "canvas":"2.1.0",
+    "jimp":"0.6.0",
+    "file-system":"2.2.2",
+    "moment":"2.22.2" ,
+    "fs-extra":"7.0.1" ,
+    "node-opus": "^0.2.7",
+    "opusscript": "0.0.6"
+  },
+  "engines": {
+    "node": "8.x"
+  }
