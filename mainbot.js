@@ -975,4 +975,4 @@ client.on('message', function(message) {
     }
 });
 
-client.login('MzU0NDI5NDAwOTk5MDAyMTEz.DdSvVw.2UNRp-oyat_k8wzTCirwv95ve28');
+client.login(process.env.BOT_TOKEN);
