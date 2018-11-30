@@ -5,7 +5,6 @@ const ms = require("ms");
 const fs = require("fs");
 var Canvas = require('canvas');
 var jimp = require('jimp');
-const AutoRole = require("discord-auto-role");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 client.on('ready', () => {
@@ -182,50 +181,7 @@ client.on('message', message => {
          message.channel.send({embed:xNiTRoZ});
      }
     });
-    var prefix = "!!";
-client.on('message', message => {
-if (message.content.startsWith(prefix + 'يست')) {
-    let pages = ['الصفحه الاولي','الصفحه الثانيه','الصفحه الثالثه']
-    let page = 1;
 
-    let embed = new Discord.RichEmbed()
-    .setColor('RANDOM')
-    .setFooter(`Page ${page} of ${pages.length}`)
-    .setDescription(pages[page-1])
-
-    message.channel.sendEmbed(embed).then(msg => {
-
-        msg.react('◀').then( r => {
-            msg.react('▶')
-
-
-        const backwardsFilter = (reaction, user) => reaction.emoji.name === '◀' .... user.id === message.author.id;
-        const forwardsFilter = (reaction, user) => reaction.emoji.name === '▶' .... user.id === message.author.id;
-
-
-        const backwards = msg.createReactionCollector(backwardsFilter, { time: 20000});
-        const forwards = msg.createReactionCollector(forwardsFilter, { time: 20000});
-
-
-
-        backwards.on('collect', r => {
-            if (page === 1) return;
-            page--;
-            embed.setDescription(pages[page-1]);
-            embed.setFooter(`Page ${page} of ${pages.length}`);
-            msg.edit(embed)
-        })
-        forwards.on('collect', r => {
-            if (page === pages.length) return;
-            page++;
-            embed.setDescription(pages[page-1]);
-            embed.setFooter(`Page ${page} of ${pages.length}`);
-            msg.edit(embed)
-        })
-        })
-    })
-    }
-});
     client.on('message', message => {
 var prefix = "!!";
 
