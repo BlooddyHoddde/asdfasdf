@@ -533,19 +533,6 @@ client.on('message', msg => {
       msg.delete();
     }
 });
-const Codes = require('codes-official');
-// Codes.set(تعريف الكلينت حقك)
-Codes.set(client)
-client.on('message', msg => {
-  if (msg.content == 'giveaway') {
-      msg.reply(`يلاااا ي شباب قيف أواي فخم .. على ولا شيء \n \n باقي 5 ثواني`).then(me => {
-
-      setTimeout(() => {
-          me.edit(`انتهى القيف اواي \n \n الفائز هو ${Codes.random(msg,'human')} \n الف مبروك`)
-      }, 5000);
-    })
-  }
-})
 client.on('message', message => {
     if (message.content.startsWith("!hack")) {
       if (message.author.bot) return
@@ -575,7 +562,7 @@ client.on('message', message => {
                message.channel.send('تم تهكيرك')
            }, 6000)
              setTimeout(function() {
-               message.channel.send('كان مقلب يا فااااااااااااااااااطر')
+               message.channel.send('هه')
            }, 7000)
            });
          }
