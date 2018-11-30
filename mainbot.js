@@ -28,7 +28,7 @@ client.on('message', msg => {
 //--------------------------------------------
 client.on('message', msg => {
   if (msg.content === 'رابط') {
-  msg.author.send('https://discord.gg/ad8e9Zy')
+  msg.author.send('https://discord.gg/6frKqQa')
   }
 });
 //--------------------------------------------
