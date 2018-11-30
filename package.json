@@ -2,9 +2,9 @@
   "name": "absd",
   "version": "2.1.0",
   "description": "asdb",
-  "main": "music.js",
+  "main": "mainbot.js",
   "scripts": {
-    "test": "node music.js"
+    "test": "node mainbot.js"
   },
   "dependencies": {
     "discord.js": "11.4.2",
