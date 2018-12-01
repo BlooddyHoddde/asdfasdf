@@ -26,18 +26,6 @@ client.on('message', msg => {
 });
 //--------------------------------------------
 client.on('message', msg => {
-  if (msg.content === 'رابط') {
-    msg.reply('Check Your DM :envelope_with_arrow:');
-  }
-});
-//--------------------------------------------
-client.on('message', msg => {
-  if (msg.content === 'رابط') {
-  msg.author.send('https://discord.gg/6frKqQa')
-  }
-});
-//--------------------------------------------
-client.on('message', msg => {
   if (msg.content === '!!help') {
     msg.reply('لقد تم إرسال الأوامر في الخاص :envelope_with_arrow: اذا لم تصلك رساله قم بإلغاء خظر الرسائل وجرب مره اخري');
   }
