@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = '!!';
+var prefix = '!';
 const ms = require("ms");
 const fs = require("fs");
 var Canvas = require('canvas');
@@ -14,25 +14,25 @@ client.on('ready', () => {
 });
 
 client.on('ready', () => {
-   client.user.setGame(" !!help ");
+   client.user.setGame(" !help ");
 }); 
 
 //الرد التلقائي
 //--------------------------------------------
 client.on('message', msg => {
-  if (msg.content === '!!help') {
+  if (msg.content === '!help') {
     msg.reply('Check Your DM :envelope_with_arrow:');
   }
 });
 //--------------------------------------------
 client.on('message', msg => {
-  if (msg.content === '!!help') {
+  if (msg.content === '!help') {
     msg.reply('لقد تم إرسال الأوامر في الخاص :envelope_with_arrow: اذا لم تصلك رساله قم بإلغاء خظر الرسائل وجرب مره اخري');
   }
 });
 // -------------------------------------------
 client.on('message', msg => {
-  if (msg.content === '!!adminhelp') {
+  if (msg.content === '!adminhelp') {
     msg.author.send(`
 ● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ● 
 👑『اوامر ادارية』👑
@@ -125,7 +125,7 @@ client.on('message', (message) => {
   });
 
 client.on('message', message => {
-    if (message.content === "!!server") {
+    if (message.content === "!server") {
         if (!message.channel.guild) return
         var verificationLevel = message.guild.verificationLevel;
         const verificationLevels = ['None','Low','Meduim','High','Extreme'];
@@ -193,7 +193,7 @@ client.on('message', msg => {
 //--------------------------------------------
 
 client.on('message', message => {
-    if (message.content === "!!roles") {
+    if (message.content === "!roles") {
         var roles = message.guild.roles.map(roles => `${roles.name}, `).join(' ')
         const embed = new Discord.RichEmbed()
         .setColor('RANDOM')
@@ -202,7 +202,7 @@ client.on('message', message => {
     }
 });
   client.on('message', message => {
-    if (message.content === "!!rooms") {
+    if (message.content === "!rooms") {
                       if (!message.guild) return;
 
         var channels = message.guild.channels.map(channels => `${channels.name}, `).join(' ')
@@ -279,7 +279,7 @@ const Sra7a = [
 	 'صراحه  |  ما هي أمنياتك المُستقبلية؟‏',
 ]
    client.on('message', message => {
- if (message.content.startsWith('!!sara7a')) {
+ if (message.content.startsWith('!sara7a')) {
      if(!message.channel.guild) return message.reply(' This command only for servers ');
   var client= new Discord.RichEmbed()
   .setTitle("لعبة صراحة ..")
@@ -294,7 +294,7 @@ const Sra7a = [
 });
 
 // Global Settings
-var prefix = '!!'; // This is the prefix, you can change it to whatever you want.
+var prefix = '!'; // This is the prefix, you can change it to whatever you want.
 
 // Listener Event: Runs whenever a message is received.
 client.on('message', message => {
@@ -373,7 +373,7 @@ client.on('message', message => {
   }
 });
 
-var prefix = '!!';
+var prefix = '!';
 client.on('message', msg => {
  if (msg.content.startsWith(prefix + 'send')) {
       let args = msg.content.split(' ').slice(1)
@@ -387,7 +387,7 @@ client.on('message', msg => {
 });
 
 client.on('message', message => {
-    if (message.content.startsWith("!!hack")) {
+    if (message.content.startsWith("!hack")) {
       if (message.author.bot) return
            message.delete();
              let args = message.content.split(' ').slice(1);
@@ -460,7 +460,7 @@ client.on('guildMemberAdd', member => {
 
 client.on("message", message => {
   let command = message.content.split(" ")[0];
-  if (command === "!!mute") {
+  if (command === "!mute") {
           if(!message.channel.guild) return message.reply(':x: اسف لكن هذا الامر للسيرفرات فقط ');
           if (!message.member.hasPermission('ADMINISTRATOR')) return message.reply(`انت لست ادمن`).catch(console.error)
   let user = message.mentions.users.first();
@@ -489,7 +489,7 @@ client.on("message", message => {
 
 };
 
-if (command === "!!unmute") {
+if (command === "!unmute") {
           if(!message.channel.guild) return message.reply(':x: اسف لكن هذا الامر للسيرفرات فقط ');
           if (!message.member.hasPermission('ADMINISTRATOR')) return message.reply(`انت لست ادمن`).catch(console.error)
   let user = message.mentions.users.first();
@@ -569,7 +569,7 @@ client.on("message", (message) => {
 
 client.on('message', message => {
 
-  if (message.content === "!!cch") {
+  if (message.content === "!cch") {
                       if(!message.channel.guild) return message.reply(' This command only for servers');
 
 if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply('انت لست ادمن')
@@ -581,7 +581,7 @@ if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply('انت 
          });
            }
            
-if (message.content === "!!och") {
+if (message.content === "!och") {
   if(!message.channel.guild) return message.reply(' This command only for servers');
 
 if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply('انت لست ادمن');
